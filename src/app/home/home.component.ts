@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
 showModal(i){
   this.user= this.myArray[i]
-  debugger;
+
 }
 
 deleteData(i){
@@ -33,7 +33,7 @@ deleteData(i){
 updateData(){
   console.log(this.myArray)
   localStorage.setItem('users', JSON.stringify(this.myArray));
-debugger;
+
   console.log(this.myArray)
 }
 }
