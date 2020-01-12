@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:4200/ -->
+<html lang="en" style="
+    height: 100px;
+"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>ECommerceProject</title>
+  <!--<base href="/">--><base href=".">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="./ECommerceProject_files/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="./ECommerceProject_files/jquery.min.js.download"></script>
+
+<!-- Popper JS -->
+<script src="./ECommerceProject_files/popper.min.js.download"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="./ECommerceProject_files/bootstrap.min.js.download"></script>
+
+<link rel="stylesheet" href="./ECommerceProject_files/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  
+<style type="text/css">/* You can add global styles to this file, and also import other style files */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9DOlxcVXNlcnNcXG11aGFtbWFkLmFmYXFcXE9uZURyaXZlIC0gQWNjZW50dXJlXFxEb2N1bWVudHNcXEFuZ3VsYXIgUHJvamVjdHNcXEp1bmFpZCBQcm9qZWN0c1xcZUNvbW1lcmNlUHJvamVjdC9zcmNcXHN0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUFBIiwiZmlsZSI6InNyYy9zdHlsZXMuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbiJdfQ== */</style><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJ9 */</style><style>*[_ngcontent-fjm-c1] {
+  box-sizing: border-box;
+}
+
+style[_ngcontent-fjm-c1] {
+  height: 100px;
+}
+
+
+
+.input-container[_ngcontent-fjm-c1] {
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+
+.icon[_ngcontent-fjm-c1] {
+  position: absolute;
+  left: 20px;
+  top: 85px;
+  padding: 9px 8px;
+  background: white;
+  color: black;
+  min-width: 50px;
+  text-align: center;
+}
+
+
+
+.input-field[_ngcontent-fjm-c1] {
+  width: 100%;
+  padding: 10px;
+  padding-left: 140px;
+  outline: none;
+}
+
+.input-field[_ngcontent-fjm-c1]:focus {
+  border: 2px solid dodgerblue;
+}
+
+
+
+.btn[_ngcontent-fjm-c1] {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn[_ngcontent-fjm-c1]:hover {
+  opacity: 1;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vQzpcXFVzZXJzXFxtdWhhbW1hZC5hZmFxXFxPbmVEcml2ZSAtIEFjY2VudHVyZVxcRG9jdW1lbnRzXFxBbmd1bGFyIFByb2plY3RzXFxKdW5haWQgUHJvamVjdHNcXGVDb21tZXJjZVByb2plY3Qvc3JjXFxhcHBcXGxvZ2luXFxsb2dpbi5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbG9naW4vbG9naW4uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFBRyxzQkFBQTtBQ0VIOztBRERBO0VBRUEsYUFBQTtBQ0dBOztBRERBLDhCQUFBOztBQUNBO0VBQ0Usb0JBQUE7RUFBQSxhQUFBO0VBQ0EsV0FBQTtFQUNBLG1CQUFBO0FDSUY7O0FEQUEseUJBQUE7O0FBQ0M7RUFDQSxrQkFBQTtFQUNBLFVBQUE7RUFDQSxTQUFBO0VBQ0EsZ0JBQUE7RUFDQyxpQkFBQTtFQUNBLFlBQUE7RUFDQyxlQUFBO0VBQ0Qsa0JBQUE7QUNHRjs7QURFQSwyQkFBQTs7QUFDQTtFQUNFLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0FDQ0Y7O0FERUE7RUFDRSw0QkFBQTtBQ0NGOztBREVBLHNDQUFBOztBQUNBO0VBQ0UsNEJBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDQ0Y7O0FERUE7RUFDRSxVQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9sb2dpbi9sb2dpbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIioge2JveC1zaXppbmc6IGJvcmRlci1ib3g7fVxyXG5zdHlsZXtcclxuXHJcbmhlaWdodDogMTAwcHg7XHJcbn1cclxuLyogU3R5bGUgdGhlIGlucHV0IGNvbnRhaW5lciAqL1xyXG4uaW5wdXQtY29udGFpbmVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1hcmdpbi1ib3R0b206IDE1cHg7XHJcbiAgXHJcbn1cclxuXHJcbi8qIFN0eWxlIHRoZSBmb3JtIGljb25zICovXHJcbiAuaWNvbiB7XHJcbiBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiBsZWZ0OiAyMHB4O1xyXG4gdG9wOjg1cHg7XHJcbiBwYWRkaW5nOjlweCA4cHg7XHJcbiAgYmFja2dyb3VuZDp3aGl0ZTtcclxuICBjb2xvcjogYmxhY2s7XHJcbiAgIG1pbi13aWR0aDogNTBweDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiB9XHJcblxyXG5cclxuXHJcbi8qIFN0eWxlIHRoZSBpbnB1dCBmaWVsZHMgKi9cclxuLmlucHV0LWZpZWxkIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIHBhZGRpbmctbGVmdDogMTQwcHg7XHJcbiAgb3V0bGluZTogbm9uZTtcclxufVxyXG5cclxuLmlucHV0LWZpZWxkOmZvY3VzIHtcclxuICBib3JkZXI6IDJweCBzb2xpZCBkb2RnZXJibHVlO1xyXG59XHJcblxyXG4vKiBTZXQgYSBzdHlsZSBmb3IgdGhlIHN1Ym1pdCBidXR0b24gKi9cclxuLmJ0biB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogZG9kZ2VyYmx1ZTtcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgcGFkZGluZzogMTVweCAyMHB4O1xyXG4gIGJvcmRlcjogbm9uZTtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgb3BhY2l0eTogMC45O1xyXG59XHJcblxyXG4uYnRuOmhvdmVyIHtcclxuICBvcGFjaXR5OiAxO1xyXG59IiwiKiB7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG59XG5cbnN0eWxlIHtcbiAgaGVpZ2h0OiAxMDBweDtcbn1cblxuLyogU3R5bGUgdGhlIGlucHV0IGNvbnRhaW5lciAqL1xuLmlucHV0LWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tYm90dG9tOiAxNXB4O1xufVxuXG4vKiBTdHlsZSB0aGUgZm9ybSBpY29ucyAqL1xuLmljb24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGxlZnQ6IDIwcHg7XG4gIHRvcDogODVweDtcbiAgcGFkZGluZzogOXB4IDhweDtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG4gIGNvbG9yOiBibGFjaztcbiAgbWluLXdpZHRoOiA1MHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi8qIFN0eWxlIHRoZSBpbnB1dCBmaWVsZHMgKi9cbi5pbnB1dC1maWVsZCB7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiAxMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDE0MHB4O1xuICBvdXRsaW5lOiBub25lO1xufVxuXG4uaW5wdXQtZmllbGQ6Zm9jdXMge1xuICBib3JkZXI6IDJweCBzb2xpZCBkb2RnZXJibHVlO1xufVxuXG4vKiBTZXQgYSBzdHlsZSBmb3IgdGhlIHN1Ym1pdCBidXR0b24gKi9cbi5idG4ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBkb2RnZXJibHVlO1xuICBjb2xvcjogd2hpdGU7XG4gIHBhZGRpbmc6IDE1cHggMjBweDtcbiAgYm9yZGVyOiBub25lO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBvcGFjaXR5OiAwLjk7XG59XG5cbi5idG46aG92ZXIge1xuICBvcGFjaXR5OiAxO1xufSJdfQ== */</style></head>
+<body>
+  <app-root _nghost-fjm-c0="" ng-version="8.1.3"><router-outlet _ngcontent-fjm-c0=""></router-outlet><app-login _ngcontent-fjm-c0="" _nghost-fjm-c1=""><div _ngcontent-fjm-c1="" class="container"><div _ngcontent-fjm-c1="" class="row" style="background-image: url(https://i.imgur.com/6YuRxJA.png)"><div _ngcontent-fjm-c1="" class="col-md-4"></div><div _ngcontent-fjm-c1="" class="col-md-4 "><h1 _ngcontent-fjm-c1="" class="text-center ">Login</h1> &nbsp; <div _ngcontent-fjm-c1="" class="input-container"><i _ngcontent-fjm-c1="" class="fa fa-user icon"></i><input _ngcontent-fjm-c1="" class="input-field " name="usrnm" placeholder="Username" type="text"></div><div _ngcontent-fjm-c1="" class="input-container"><i _ngcontent-fjm-c1=""></i><input _ngcontent-fjm-c1="" class="input-field " name="usrnm" placeholder="Password" type="text"></div><button _ngcontent-fjm-c1="" class="btn btn-primary"> Submit </button><div _ngcontent-fjm-c1="" class="col-md-4"></div></div></div></div></app-login></app-root>
+<script src="./ECommerceProject_files/runtime.js.download" type="module"></script><script src="./ECommerceProject_files/polyfills.js.download" type="module"></script><script src="./ECommerceProject_files/styles.js.download" type="module"></script><script src="./ECommerceProject_files/vendor.js.download" type="module"></script><script src="./ECommerceProject_files/main.js.download" type="module"></script>
+
+<object id="__symantecPKIClientMessenger" data-supports-flavor-configuration="true" data-extension-version="0.5.0.109" style="display: none;"></object><span id="__symantecPKIClientDetector" style="display: none;">__PRESENT</span></body></html>

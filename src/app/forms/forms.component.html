@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+
+        <div [formGroup]="SignUp" class="col-md-4 mt-3">
+            <h1 class="text-center">Sign Up</h1>
+            <h5 class="text-center">Create Your Account</h5>
+            <div class="form-group">
+
+                <!-- First Name -->
+                <div class="form-group">
+                <label [class.red]="SignUp.get('firstName').touched && SignUp.get('firstName').hasError('required')" class="w-100">First Name</label>
+                <input [(ngModel)]="firstName" formControlName="firstName" class="w-100 form-control">
+            </div>
+            <p class="errorMsg"
+            *ngIf="SignUp.get('firstName').touched && SignUp.get('firstName').hasError('required')">
+            First Name is required</p>
+                <!--last Name -->
+                <div class="form-group">
+                <label class="w-100">Last Name</label>
+                <input [(ngModel)]="lastName" formControlName="lastName" class="w-100 form-control">
+            </div>
+            <p class="errorMsg"
+            *ngIf="SignUp.get('lastName').touched && SignUp.get('lastName').hasError('required')">
+           last Name is required</p>
+                <!--Email -->
+                <div class="form-group">
+                <label class="w-100">Email</label>
+                <input [(ngModel)]="email" formControlName="email" class="w-100 form-control">
+            </div>
+            <p class="errorMsg"
+            *ngIf="SignUp.get('email').touched && SignUp.get('email').hasError('required')">
+            Email is required</p>
+                <!--Password -->
+                <div class="form-group">
+                <label class="w-100">Password</label>
+                <input [(ngModel)]="password" formControlName="password" type="password" class="w-100 form-control">
+            </div>
+            <p class="errorMsg"
+            *ngIf="SignUp.get('password').touched && SignUp.get('password').hasError('required')">
+            Password is required</p>
+            </div>
+            <div><button [disabled]="!SignUp.valid" (click)="saveToLocal()" class="btn btn-primary w-100">Save</button></div>
+        </div>
+        <div class="col-md-4"></div>
+
+    </div>
+</div>
