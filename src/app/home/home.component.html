@@ -32,7 +32,7 @@
             <!-- Modal Header -->
             <!-- *ngFor="let user of myArray; index as i" -->
             <div class="modal-header">
-                <h4 class="modal-title">{{user.firstName}}'s Data</h4>
+                <h4 class="modal-title">{{Currentuser.firstName}}'s Data</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
@@ -40,13 +40,13 @@
             <div class="modal-body">
 
                 <div><label>First Name:</label>
-                    <span><input [(ngModel)]="user.firstName" class="form-control "></span></div>
+                    <span><input [(ngModel)]="Currentuser.firstName" class="form-control "></span></div>
 
-                <div><label>First Name:</label>
-                    <span><input [(ngModel)]="user.lastName" class="form-control "></span></div>
+                <div><label>Last Name:</label>
+                    <span><input [(ngModel)]="Currentuser.lastName" class="form-control "></span></div>
 
-                <div><label>First Name:</label>
-                    <span><input [(ngModel)]="user.email" class="form-control "></span></div>
+                <div><label>Email Address:</label>
+                    <span><input [(ngModel)]="Currentuser.email" class="form-control "></span></div>
 
 
             </div>

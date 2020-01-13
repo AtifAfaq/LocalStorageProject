@@ -14,7 +14,7 @@ export class FormsComponent implements OnInit {
   password: string = "";
   myArray: any = [];
   array: any = [];
-  constructor(public fb: FormBuilder, public router:Router) { }
+  constructor(public fb: FormBuilder, public router: Router) { }
 
   ngOnInit() {
     this.SignUp = this.fb.group({
@@ -42,19 +42,22 @@ export class FormsComponent implements OnInit {
       email: this.email,
       password: this.password
     }
-  
-    // first get from local storage
 
+    // first get from local storage
+    debugger;
     var retreivedUsers = localStorage.getItem('users');
     this.myArray = JSON.parse(retreivedUsers);
-
+    if (!this.myArray) {
+      this.myArray = [];
+    }
     this.myArray.push(User);
+
     localStorage.setItem('users', JSON.stringify(this.myArray));
-   
-  //  to view the array
+
+    //  to view the array
     // var mydata = localStorage.getItem('users');
     // this.array = JSON.parse(mydata);
-  this.router.navigate(['/home']);
+    this.router.navigate(['/home']);
     this.SignUp.reset();
 
   }
