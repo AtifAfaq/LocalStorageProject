@@ -1,62 +1,157 @@
 <div class="container">
-    <h2>Customer Data</h2>
+  <h2>Customer Data</h2>
 
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
-                <th>Status</th>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Status</th>
+      </tr>
+    </thead>
 
-            </tr>
-        </thead>
-
-        <tbody *ngFor="let user of myArray; index as i">
-            <tr>
-                <td>{{user.firstName}}</td>
-                <td>{{user.lastName}}</td>
-                <td>{{user.email}}</td>
-                <td><button (click)="showModal(i)" class="btn btn-primary w-50" data-toggle="modal"
-                        data-target="#myModal">Edit</button>
-                    <button (click)="deleteData(i)" class="btn btn-danger w-50">Delete</button></td>
-            </tr>
-        </tbody>
-    </table>
+    <tbody *ngFor="let user of myArray; index as i">
+      <tr>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <button
+            (click)="showModal(i)"
+            class="btn btn-primary w-50"
+            data-toggle="modal"
+            data-target="#myModal"
+          >
+            Edit
+          </button>
+          <button
+            (click)="confirmDelete(i)"
+            class="btn btn-danger w-50"
+            data-toggle="modal"
+            data-target="#delModal"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <div class="modal" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <!-- *ngFor="let user of myArray; index as i" -->
+      <div class="modal-header">
+        <h4 class="modal-title">{{ Currentuser.firstName }}'s Data</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
 
-            <!-- Modal Header -->
-            <!-- *ngFor="let user of myArray; index as i" -->
-            <div class="modal-header">
-                <h4 class="modal-title">{{Currentuser.firstName}}'s Data</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-
-                <div><label>First Name:</label>
-                    <span><input [(ngModel)]="Currentuser.firstName" class="form-control "></span></div>
-
-                <div><label>Last Name:</label>
-                    <span><input [(ngModel)]="Currentuser.lastName" class="form-control "></span></div>
-
-                <div><label>Email Address:</label>
-                    <span><input [(ngModel)]="Currentuser.email" class="form-control "></span></div>
-
-
-            </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" (click)="updateData()" class="btn btn-success" data-dismiss="modal">save</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div>
+          <label>First Name:</label>
+          <span
+            ><input [(ngModel)]="Currentuser.firstName" class="form-control "
+          /></span>
         </div>
+
+        <div>
+          <label>Last Name:</label>
+          <span
+            ><input [(ngModel)]="Currentuser.lastName" class="form-control "
+          /></span>
+        </div>
+
+        <div>
+          <label>Email Address:</label>
+          <span
+            ><input [(ngModel)]="Currentuser.email" class="form-control "
+          /></span>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button
+          type="button"
+          (click)="updateData()"
+          class="btn btn-success"
+          data-dismiss="modal"
+        >
+          save
+        </button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Close
+        </button>
+      </div>
     </div>
+  </div>
+</div>
+<!-- ------------------------------------------------------------------------------------------- -->
+<div class="modal" id="delModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <!-- *ngFor="let user of myArray; index as i" -->
+      <div class="modal-header">
+        <h4 class="modal-title">Delete {{ Currentuser.firstName }}'s Data</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div>
+          <label>First Name:</label>
+          <span
+            ><input
+              value="{{ Currentuser.firstName }}"
+              class="form-control"
+              readonly
+          /></span>
+        </div>
+
+        <div>
+          <label>Last Name:</label>
+          <span
+            ><input
+              value="{{ Currentuser.lastName }}"
+              class="form-control"
+              readonly
+          /></span>
+        </div>
+
+        <div>
+          <label>Email Address:</label>
+          <span
+            ><input
+              value="{{ Currentuser.email }}"
+              class="form-control"
+              readonly
+          /></span>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button
+          type="button"
+          (click)="deleteData(index)"
+          class="btn btn-danger"
+          data-dismiss="modal"
+        >
+          Confirm Delete
+        </button>
+        <button type="button" class="btn btn-alert" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
