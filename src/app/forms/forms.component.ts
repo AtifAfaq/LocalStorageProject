@@ -41,14 +41,10 @@ export class FormsComponent implements OnInit {
     }
     debugger;
     this.myArray.map(x => {
-      if (x.email == this.email) alert("Email Already in used");
-      return;
-
-      this.myArray.push(User);
-      localStorage.setItem("users", JSON.stringify(this.myArray));
-      this.router.navigate(["/home"]);
-      this.SignUp.reset();
-      console.log(this.myArray);
+      if (x.email == this.email) {
+        alert("Email Already in used");
+        return;
+      }
     });
     this.myArray.push(User);
     localStorage.setItem("users", JSON.stringify(this.myArray));

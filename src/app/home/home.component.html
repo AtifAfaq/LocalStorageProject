@@ -112,7 +112,8 @@
           <span
             ><input
               [(ngModel)]="Currentuser.firstName"
-              class="form-control  " readonly
+              class="form-control  "
+              readonly
           /></span>
         </div>
 
@@ -121,7 +122,8 @@
           <span
             ><input
               [(ngModel)]="Currentuser.lastName"
-              class="form-control  " readonly
+              class="form-control  "
+              readonly
           /></span>
         </div>
 
@@ -130,7 +132,8 @@
           <span
             ><input
               [(ngModel)]="Currentuser.email"
-              class="form-control  " readonly
+              class="form-control  "
+              readonly
           /></span>
         </div>
       </div>
@@ -139,7 +142,7 @@
       <div class="modal-footer">
         <button
           type="button"
-          (click)="deleteData(i)"
+          (click)="deleteData(activeIndex)"
           class="btn btn-success"
           data-dismiss="modal"
         >
