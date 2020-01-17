@@ -14,6 +14,7 @@ export class FormsComponent implements OnInit {
   password: string = "";
   myArray: any = [];
   array: any = [];
+  userHai: boolean = false;
   constructor(public fb: FormBuilder, public router: Router) {}
 
   ngOnInit() {
@@ -43,17 +44,21 @@ export class FormsComponent implements OnInit {
     this.myArray.map(x => {
       if (x.email == this.email) {
         alert("Email Already in used");
+        this.userHai = true;
         return;
       }
     });
-    this.myArray.push(User);
-    localStorage.setItem("users", JSON.stringify(this.myArray));
-    this.router.navigate(["/home"]);
-    this.SignUp.reset();
-    console.log(this.myArray);
-    //  to view the array
-    // var mydata = localStorage.getItem('users');
-    // this.array = JSON.parse(mydata);
+
+    if (!this.userHai) {
+      this.myArray.push(User);
+      localStorage.setItem("users", JSON.stringify(this.myArray));
+      this.router.navigate(["/home"]);
+      this.SignUp.reset();
+      console.log(this.myArray);
+      //  to view the array
+      // var mydata = localStorage.getItem('users');
+      // this.array = JSON.parse(mydata);
+    }
   }
 
   // setTimeout(() => {
