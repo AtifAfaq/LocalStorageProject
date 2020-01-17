@@ -7,6 +7,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./forms.component.scss"]
 })
 export class FormsComponent implements OnInit {
+
   SignUp: FormGroup;
   firstName: string = "";
   lastName: string = "";
@@ -15,7 +16,8 @@ export class FormsComponent implements OnInit {
   myArray: any = [];
   array: any = [];
   userHai: boolean = false;
-  constructor(public fb: FormBuilder, public router: Router) {}
+
+  constructor(public fb: FormBuilder, public router: Router) { }
 
   ngOnInit() {
     this.SignUp = this.fb.group({
@@ -25,6 +27,8 @@ export class FormsComponent implements OnInit {
       password: ["", Validators.compose([Validators.required])]
     });
   }
+
+
   saveToLocal() {
     var User: any = {
       firstName: this.firstName,

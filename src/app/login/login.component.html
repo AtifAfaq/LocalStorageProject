@@ -8,47 +8,28 @@
         <!--Email -->
         <div class="form-group">
           <label class="w-100">Email</label>
-          <input
-            [(ngModel)]="email"
-            formControlName="email"
-            class="w-100 form-control"
-          />
+          <input [(ngModel)]="email" formControlName="email" class="w-100 form-control" />
         </div>
-        <p
-          class="errorMsg"
-          *ngIf="
+        <p class="errorMsg" *ngIf="
             Login.get('email').touched &&
             Login.get('email').hasError('required')
-          "
-        >
+          ">
           Email is required
         </p>
         <!--Password -->
         <div class="form-group">
           <label class="w-100">Password</label>
-          <input
-            [(ngModel)]="password"
-            formControlName="password"
-            type="password"
-            class="w-100 form-control"
-          />
+          <input [(ngModel)]="password" formControlName="password" type="password" class="w-100 form-control" />
         </div>
-        <p
-          class="errorMsg"
-          *ngIf="
+        <p class="errorMsg" *ngIf="
             Login.get('password').touched &&
             Login.get('password').hasError('required')
-          "
-        >
+          ">
           Password is required
         </p>
       </div>
       <div>
-        <button
-          [disabled]="!Login.valid"
-          (click)="login()"
-          class="btn btn-primary w-100"
-        >
+        <button [disabled]="!Login.valid" (click)="login()" class="btn btn-primary w-100">
           Save
         </button>
       </div>

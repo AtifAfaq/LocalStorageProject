@@ -7,11 +7,14 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {
+
   Login: FormGroup;
   email: string = "";
   password: string = "";
   myArray: any = [];
-  constructor(public fb: FormBuilder, public router: Router) {}
+
+  constructor(public fb: FormBuilder, public router: Router) { }
+
 
   ngOnInit() {
     this.Login = this.fb.group({
@@ -19,17 +22,37 @@ export class LoginComponent implements OnInit {
       password: ["", Validators.compose([Validators.required])]
     });
   }
+
+
   login() {
-    debugger;
     var retreivedUsers = localStorage.getItem("users");
     this.myArray = JSON.parse(retreivedUsers);
+
+    // for (var i = 0; i < this.myArray.length; i++) {
+    //   if (this.myArray[i].email == this.email && this.myArray[i].password == this.password) {
+    //     alert('Logged In Successfully!');
+    //     this.router.navigate(['/home']);
+    //     var userFound = true;
+    //     break;
+    //   }
+    // }
+    // if (!userFound) {
+    //   alert('Invalid Email or Password!');
+    // }
+
+    var userFound = false;
     this.myArray.map(x => {
-      if (x.email == this.email && x.password == this.password) {
-        alert("Successhully Logged in");
-        this.router.navigate(["/home"]);
-      } else {
-        alert("Invalid Email or password");
+      if (!userFound) {
+        if (x.email == this.email && x.password == this.password) {
+          alert("Successfully Logged in");
+          this.router.navigate(["/home"]);
+          userFound = true;
+        }
       }
     });
+    if (!userFound) {
+      alert('Invalid Email or Password!');
+    }
   }
+
 }
